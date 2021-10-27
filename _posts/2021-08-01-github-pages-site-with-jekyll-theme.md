@@ -27,13 +27,13 @@ see [installation](https://jekyllrb.com/docs/installation/#requirements) guide f
 ### Creating a Jekyll site 
 1. Run **jekyll new PATH** to create a new site in **PATH**
 ```yml
-$ jekyll new mysite
+$ jekyll new jekyll-hello-world
 :
-New jekyll site installed in ./mysite
+New jekyll site installed in ./jekyll-hello-world
 ```
 2. Move into the new site directory
 ```yml
-$ cd mysite
+$ cd jekyll-hello-world
 ```
 The following files and configurations are generated.
 ```yml
@@ -56,9 +56,9 @@ index.markdown
 3. Let's build the files and configurations and serve it up on your local web server.
 ```yml
 $ bundle exec jekyll serve
-Configuration file: ./mysite/_config.yml
-            Source: ./mysite
-       Destination: ./mysite/_site
+Configuration file: ./jekyll-hello-world/_config.yml
+            Source: ./jekyll-hello-world
+       Destination: ./jekyll-hello-world/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
@@ -84,7 +84,6 @@ author:
   name: [Your name]
   email: [Your email address]
 ```
-
 ### Creating a post
 To create a post, add a file to your _posts directory with the following format:
 ```yml
@@ -110,7 +109,46 @@ You can add **more posts** to make your site more interesting.
 ### Update the About page
 Open the about.markdown file. Write something about you and what you do.
 
-Open your [site](http://localhost:4000) and have a look through your About page and blog posts.
+View the new site. Open any browser and enter the server address *http://127.0.0.1:4000/* or *localhost:4000* and have a look through your updated About page and blog posts.
+
+### Hosting on Github Pages
+Configuring a publishing source for your GitHub Pages site.
+1. On GitHub, navigate to your site's repository.
+2. Under your repository name, click  Settings.
+3. In the left sidebar, click Pages.
+4. On Github Pages, select gh-pages branch as the publishing source.
+5. You site is published at https://username.github.io/repository/
+
+Push your site to Github Pages site.
+1. Initialize you site as local git repository
+```yml
+$ git init
+```
+2. checkout a new branch named gh-pages.
+*Note* that  the publishing source for your project site is the gh-pages branch.
+```yml
+$ git checkout -b gh-pages
+Switched to a new branch 'gh-pages'
+```
+3. Update the index using the current content found in the working tree, to prepare the content staged for the next commit
+```yml
+$ git checkout -b gh-pages
+Switched to a new branch 'gh-pages'
+```
+4. Create a new commit containing the current contents of the index and the given log message describing the changes.
+```yml
+$ git commit -m "add initial files for my new site"
+```
+5. Push your local git repository for your site
+```yml
+git remote add origin https://username.github.io/repository.git
+git push -u origin gh-pages
+```
+6. View your site at https://username.github.io/repository/
+
+
+
+
 
 
 

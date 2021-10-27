@@ -124,16 +124,15 @@ Push your site to Github Pages site.
 ```yml
 $ git init
 ```
-2. checkout a new branch named gh-pages.
-*Note* that  the publishing source for your project site is the gh-pages branch.
+2. checkout a new branch named gh-pages. 
+*Note that  the publishing source for your project site is the gh-pages branch.*
 ```yml
 $ git checkout -b gh-pages
 Switched to a new branch 'gh-pages'
 ```
 3. Update the index using the current content found in the working tree, to prepare the content staged for the next commit
 ```yml
-$ git checkout -b gh-pages
-Switched to a new branch 'gh-pages'
+$ git add .
 ```
 4. Create a new commit containing the current contents of the index and the given log message describing the changes.
 ```yml
